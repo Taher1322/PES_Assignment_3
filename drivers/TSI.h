@@ -19,7 +19,35 @@
 #ifndef TSI_H_
 #define TSI_H_
 
+/*************************************************************************************************************
+ *
+ * Name :		  	void Touch_Init()
+ *
+ *
+ *
+ * Description :	This function initializes the slider in BUSY wait loop
+ * It defines all the internal register bit as required - oscillator, scanning, electrode voltage
+ *
+ * Inputs: NONE
+ *
+ * Return: NONE
+ *************************************************************************************************************/
+
 void Touch_Init();
+
+/*************************************************************************************************************
+ *
+ * Name :		  	void Touch_Scan_LH()
+ *
+ *
+ *
+ * Description :	This function reads the slider values on user touch
+ * Channel 10 is programmed and masked to get the touch input data
+ *
+ * Inputs: NONE
+ *
+ * Return: Touch sensor data
+ *************************************************************************************************************/
 int Touch_Scan_LH(void);
 
 #endif /* TSI_H_ */

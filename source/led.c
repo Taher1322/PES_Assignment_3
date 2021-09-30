@@ -31,6 +31,7 @@
 #include "led.h"
 #include "delay.h"
 #include "TSI.h"
+#include "log.h"
 
 //Global declaration of LED pins on board
 #define RED_LED_PIN (18)
@@ -206,9 +207,9 @@ void TSI_slider_read_FSM(){
 	case read:
 		//Reading the slider value
 		g_touch_val = Touch_Scan_LH();
-#ifdef DEBUG
-		PRINTF("Slider value %d\n\r", g_touch_val);
-#endif
+
+		//LOG("Slider value %d\n\r", g_touch_val);
+
 
 		//Checking if slider event is generated and then based on values - LED status variable value is changed
 		if ((g_touch_val < 70) && (g_touch_event == 0))
@@ -221,27 +222,24 @@ void TSI_slider_read_FSM(){
 			g_led_color = 1;					//Left side slider was touched - RED LED state to be executed
 			g_touch_event = 1;
 			//Debug mode print statements
-			#ifdef DEBUG
-				PRINTF("Left side of slider touched - Red light to blink %d\n\r", g_touch_val);
-			#endif
+			LOG("CHANGE LED TO RED\n\r");
+			LOG("Left side of slider touched - Red light to blink %d\n\r", g_touch_val);
 		}
 		if ((g_touch_val > 500) && (g_touch_val < 800))
 		{
 			g_led_color = 2;					//Center side slider was touched - GREEN LED state to be executed
 			g_touch_event = 1;
 			//Debug mode print statements
-			#ifdef DEBUG
-				PRINTF("Center side of slider touched - Green light to blink %d\n\r", g_touch_val);
-			#endif
+			LOG("CHANGE LED TO GREEN\n\r");
+			LOG("Center side of slider touched - Green light to blink %d\n\r", g_touch_val);
 		}
 		if ((g_touch_val > 800))
 		{
 			g_led_color = 3;					//Right side slider was touched - BLUE LED state to be executed
 			g_touch_event = 1;
 			//Debug mode print statements
-			#ifdef DEBUG
-				PRINTF("Right side of slider touched - Blue light to blink %d\n\r", g_touch_val);
-			#endif
+			LOG("CHANGE LED TO BLUE\n\r");
+		    LOG("Right side of slider touched - Blue light to blink %d\n\r", g_touch_val);
 		}
 		if (g_on_count_delay == 0)
 		{

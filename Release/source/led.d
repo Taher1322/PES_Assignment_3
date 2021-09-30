@@ -20,7 +20,8 @@ source/led.o source/led.d: ../source/led.c \
  C:\Users\ujjai\Documents\MCUXpressoIDE_11.2.0_4120\workspace\Assignment3_Blinkenlights\utilities/fsl_debug_console.h \
  C:\Users\ujjai\Documents\MCUXpressoIDE_11.2.0_4120\workspace\Assignment3_Blinkenlights\drivers/led.h \
  C:\Users\ujjai\Documents\MCUXpressoIDE_11.2.0_4120\workspace\Assignment3_Blinkenlights\drivers/delay.h \
- C:\Users\ujjai\Documents\MCUXpressoIDE_11.2.0_4120\workspace\Assignment3_Blinkenlights\drivers/TSI.h
+ C:\Users\ujjai\Documents\MCUXpressoIDE_11.2.0_4120\workspace\Assignment3_Blinkenlights\drivers/TSI.h \
+ C:\Users\ujjai\Documents\MCUXpressoIDE_11.2.0_4120\workspace\Assignment3_Blinkenlights\drivers/log.h
 
 C:\Users\ujjai\Documents\MCUXpressoIDE_11.2.0_4120\workspace\Assignment3_Blinkenlights\board/board.h:
 
@@ -65,3 +66,5 @@ C:\Users\ujjai\Documents\MCUXpressoIDE_11.2.0_4120\workspace\Assignment3_Blinken
 C:\Users\ujjai\Documents\MCUXpressoIDE_11.2.0_4120\workspace\Assignment3_Blinkenlights\drivers/delay.h:
 
 C:\Users\ujjai\Documents\MCUXpressoIDE_11.2.0_4120\workspace\Assignment3_Blinkenlights\drivers/TSI.h:
+
+C:\Users\ujjai\Documents\MCUXpressoIDE_11.2.0_4120\workspace\Assignment3_Blinkenlights\drivers/log.h:

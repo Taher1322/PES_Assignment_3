@@ -51,9 +51,6 @@ int main(void) {
     BOARD_InitDebugConsole();
 #endif
 
-#ifdef DEBUG
-    PRINTF("HELLO WORLD");
-#endif
     //Enabling the Port B clock
     PORTB_CLK();
     //Enabling the Port D clock
@@ -70,9 +67,6 @@ int main(void) {
     while(1) {
     	//Polling for Slider event function
         TSI_slider_read_FSM();
-        /* 'Dummy' NOP to allow source level single stepping of
-            tight while() loop */
-        __asm volatile ("nop");
     }
     return 0 ;
 }
