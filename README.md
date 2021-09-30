@@ -130,11 +130,29 @@ The values of registers are stored in stack using Push instruction
   # Compare R3 equal to zero Z flag will be set else cleared 
   
     3228:	2b00      	cmp	r3, #0
+  
+  # Branch if not equal to and run the loop 
+  
     322a:	d1f9      	bne.n	3220 <delay+0x1a>
+  
+  #  Move --> R8 = R8 No operation 
+  
     322c:	46c0      	nop			; (mov r8, r8)
+  
+  #  Move --> R8 = R8 No operation 
+  
     322e:	46c0      	nop			; (mov r8, r8)
+  
+  # Store back the contents of R7 to stack pointer 
+  
     3230:	46bd      	mov	sp, r7
+  
+  # Add the stack which was used at start 
+  
     3232:	b002      	add	sp, #8
+  
+  # Pop the values back to Program counter for execution
+  
     3234:	bd80      	pop	{r7, pc}
 
 
